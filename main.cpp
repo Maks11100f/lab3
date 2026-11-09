@@ -4,9 +4,7 @@
 #include <syncstream>
 #include <thread>
 
-#ifdef _WIN32
 #include <windows.h>
-#endif
 
 #include "scheme.h"
 
@@ -14,9 +12,7 @@ using namespace std;
 
 int main()
 {
-#ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
-#endif
 
     osyncstream(cout) << "Обчислення розпочато." << endl;
     auto start = chrono::steady_clock::now();
